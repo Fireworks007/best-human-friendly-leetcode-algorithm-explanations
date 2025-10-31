@@ -1,44 +1,35 @@
-# Remove Duplicates from Sorted Array II  
+# Remove Duplicates from Sorted Array II
+
 **Category / 分类:** Array / Two Pointers  
 **Difficulty / 难度:** Medium  
 **LeetCode:** [80. Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/)
 
 ---
 
-## 💡 Problem Statement / 题目描述  
+## Problem Statement / 题目描述
 
 **English:**  
-Given an integer array `nums` sorted in non-decreasing order,  
-remove some duplicates **in-place** such that each unique element appears at most twice.  
-Return the new length of the modified array.
+Given an integer array `nums` sorted in non-decreasing order, remove some duplicates **in-place** such that each unique element appears at most twice. Return the new length of the modified array.
 
 **中文：**  
-给定一个按非递减顺序排序的整数数组 `nums`，  
-要求原地删除部分重复元素，使得每个元素最多出现两次。  
-返回修改后数组的新长度。
+给定一个按非递减顺序排序的整数数组 `nums`，要求原地删除部分重复元素，使得每个元素最多出现两次。返回修改后数组的新长度。
 
 ---
 
-## 🧠 Idea / 解题思路  
+## Idea / 解题思路
 
 **English:**  
-We use the **Two Pointers** technique — one pointer (`fast`) scans the array,  
-and the other pointer (`slow`) writes the next valid element.  
-A counter `count` tracks how many times the current number has appeared.  
-When a new number appears, reset `count = 1`.
+We use the **Two Pointers** technique — one pointer (`fast`) scans the array, and the other pointer (`slow`) writes the next valid element. A counter `count` tracks how many times the current number has appeared. When a new number appears, reset `count = 1`.
 
 **中文：**  
-采用 **双指针法**：  
-一个指针 `fast` 遍历数组，另一个指针 `slow` 负责写入下一个合法元素。  
-`count` 用于统计当前数字出现的次数。  
-当遇到新数字时，将 `count` 重置为 1。
+采用**双指针法**：一个指针 `fast` 遍历数组，另一个指针 `slow` 负责写入下一个合法元素。`count` 用于统计当前数字出现的次数。当遇到新数字时，将 `count` 重置为 1。
 
 **Key idea / 核心思想：**  
-> 保留每个数字的前 `k` 次出现，丢弃第 `k+1` 次及之后的重复项。
+保留每个数字的前 `k` 次出现，丢弃第 `k+1` 次及之后的重复项。
 
 ---
 
-## 🧩 Code / 代码实现  
+## Code / 代码实现
 
 ```python
 class Solution:
@@ -81,41 +72,46 @@ class Solution:
         # slow 最终指向下一个可写入位置，即合法元素的个数
         # slow points to the next valid position → equals the new length
         return slow
+```
 
-🧾 Explanation / 详细解释
+---
 
-Step-by-step (English):
-1️⃣ Compare each element with the previous one.
-2️⃣ If it’s the same number → increment count.
-3️⃣ If count ≤ k → keep it.
-4️⃣ If new number → reset count = 1.
-5️⃣ Continue until the end of the array.
+## Explanation / 详细解释
 
-逐步说明（中文）：
-1️⃣ 依次比较每个元素与前一个元素；
-2️⃣ 若相同，count += 1；
-3️⃣ 当 count ≤ k 时保留该元素；
-4️⃣ 遇到新数字时重置 count = 1；
-5️⃣ 重复直到扫描完整个数组。
+**Step-by-step (English):**
 
-Complexity / 复杂度分析：
+1. Compare each element with the previous one.
+2. If it's the same number → increment count.
+3. If count ≤ k → keep it.
+4. If new number → reset count = 1.
+5. Continue until the end of the array.
 
-⏱️ Time: O(n) — single traversal
+**逐步说明（中文）：**
 
-💾 Space: O(1) — in-place modification
+1. 依次比较每个元素与前一个元素
+2. 若相同，count += 1
+3. 当 count ≤ k 时保留该元素
+4. 遇到新数字时重置 count = 1
+5. 重复直到扫描完整个数组
 
-🪪 License & Copyright
+---
 
-### 🪪 License & Copyright
+## Complexity / 复杂度分析
+
+**Time Complexity / 时间复杂度:** O(n) — single traversal / 单次遍历
+
+**Space Complexity / 空间复杂度:** O(1) — in-place modification / 原地修改
+
+---
+
+## License & Copyright / 版权信息
 
 © 2025 Fireworks007  
 Licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)
 
 You are free to **read and share** this material with proper credit.  
-However, **commercial use, modification, or redistribution** is **not allowed**.  
+However, **commercial use, modification, or redistribution** is **not allowed**.
 
-（版权所有 © 2025 Fireworks007。  
-本题解受 [CC BY-NC-ND 4.0 国际许可协议](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh) 保护，  
-仅供学习与分享，禁止商用、修改或再分发。）  
+（版权所有 © 2025 Fireworks007。本题解受 [CC BY-NC-ND 4.0 国际许可协议](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh) 保护，仅供学习与分享，禁止商用、修改或再分发。）
 
 [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
