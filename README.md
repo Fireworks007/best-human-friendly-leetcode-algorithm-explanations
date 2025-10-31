@@ -1,4 +1,5 @@
 # 🧠 Best Human-Friendly LeetCode Algorithm Explanations  
+
 Human-friendly LeetCode algorithm ideas and reasoning notes.  
 
 ---
@@ -6,12 +7,14 @@ Human-friendly LeetCode algorithm ideas and reasoning notes.
 ## 💡 About This Project / 关于本项目  
 
 **English:**  
+
 I created this project because I found that many **official LeetCode explanations don't sound human**,  
 and sometimes their **code or algorithm design feels downright anti-human** 😅.  
 So I decided to write my own **human-friendly explanation notes** —  
 to make algorithms easier to understand, logical, and intuitive.  
 
 **中文：**  
+
 我创建这个项目的原因是：我发现很多 LeetCode 官方题解经常**不说人话**，  
 而且代码和算法设计有时候还**反人类**。  
 所以我决定做一个真正 **"说人话" 的算法讲解笔记**，  
@@ -42,4 +45,3 @@ However, **commercial use, modification, or redistribution** is **not allowed**.
 仅供学习与分享，禁止商用、修改或再分发。）  
 
 [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/)
-
